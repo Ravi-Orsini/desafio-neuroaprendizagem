@@ -1,20 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('start-button');
     const startScreen = document.getElementById('start-screen');
-    // Placeholder for next screen, will be implemented later
-    // const level1Screen = document.getElementById('level-1-screen'); 
-
-    startButton.addEventListener('click', () => {
-        startScreen.classList.remove('active');
-        // In a real scenario, you would show the next screen here
-        // level1Screen.classList.add('active');
-        alert('Começar o jogo! (Nível 1 será carregado aqui)');
-        // For now, we'll just alert and then proceed to build Level 1 HTML/CSS/JS
-    });
-});
-
-
-
 
     const level1Screen = document.getElementById('level-1-screen');
     const level1Terms = document.querySelectorAll('.column-a .term');
@@ -80,18 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Placeholder for next level button click, will be implemented later
     nextLevel2Button.addEventListener('click', () => {
-        alert('Indo para o Nível 2! (Será implementado em breve)');
-        // Here you would hide level1Screen and show level2Screen
+        level1Screen.classList.remove('active');
+        level2Screen.classList.add('active');
     });
-
-});
-
-
-
-
-
 
     const level2Screen = document.getElementById("level-2-screen");
     const memoryCards = document.querySelectorAll(".memory-card");
@@ -172,36 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     memoryCards.forEach(card => card.addEventListener("click", flipCard));
 
-    // Update startButton listener to go to Level 1
-    startButton.removeEventListener("click", () => {
-        startScreen.classList.remove("active");
-        alert("Começar o jogo! (Nível 1 será carregado aqui)");
-    });
-    startButton.addEventListener("click", () => {
-        startScreen.classList.remove("active");
-        level1Screen.classList.add("active");
-    });
-
-    // Update nextLevel2Button listener to go to Level 2
-    nextLevel2Button.removeEventListener("click", () => {
-        alert("Indo para o Nível 2! (Será implementado em breve)");
-    });
-    nextLevel2Button.addEventListener("click", () => {
-        level1Screen.classList.remove("active");
-        level2Screen.classList.add("active");
-    });
-
-    // Placeholder for nextLevel3Button click, will be implemented later
-    nextLevel3Button.addEventListener("click", () => {
-        alert("Indo para o Nível 3! (Será implementado em breve)");
-        // Here you would hide level2Screen and show level3Screen
-    });
-
-
-
-
-
-
     const level3Screen = document.getElementById("level-3-screen");
     const submitQuizButton = document.getElementById("submit-quiz-button");
     const level3Feedback = document.getElementById("level-3-feedback");
@@ -252,33 +200,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Update nextLevel3Button listener to go to Level 3
-    nextLevel3Button.removeEventListener("click", () => {
-        alert("Indo para o Nível 3! (Será implementado em breve)");
-    });
     nextLevel3Button.addEventListener("click", () => {
         level2Screen.classList.remove("active");
         level3Screen.classList.add("active");
     });
 
-    // Placeholder for nextLevelFinalButton click, will be implemented later
-    nextLevelFinalButton.addEventListener("click", () => {
-        alert("Ver minha conquista! (Tela Final será implementada em breve)");
-        // Here you would hide level3Screen and show finalScreen
-    });
-
-
-
-
-
-
     const finalScreen = document.getElementById("final-screen");
     const restartButton = document.getElementById("restart-button");
 
-    // Update nextLevelFinalButton listener to go to Final Screen
-    nextLevelFinalButton.removeEventListener("click", () => {
-        alert("Ver minha conquista! (Tela Final será implementada em breve)");
-    });
     nextLevelFinalButton.addEventListener("click", () => {
         level3Screen.classList.remove("active");
         finalScreen.classList.add("active");
@@ -287,5 +216,4 @@ document.addEventListener('DOMContentLoaded', () => {
     restartButton.addEventListener("click", () => {
         location.reload(); // Simple way to restart the game
     });
-
-
+});
