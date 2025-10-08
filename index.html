@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Gamificado Radial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="start-screen" class="screen active">
+            <h1>Desafio Gamificado Radial</h1>
+            <h2>Teste seus conhecimentos sobre a Taxonomia da Neuroaprendizagem da Ânima.</h2>
+            <p>Clique em 'Começar' para embarcar nesta jornada.</p>
+            <button id="start-button">Começar</button>
+        </div>
+
+        <div id="level-1-screen" class="screen">
+            <h1>Nível 1: Iniciante do E2A</h1>
+            <h3>Associação de Colunas</h3>
+            <p>Associe cada processo da Taxonomia (Coluna A) à sua definição correta (Coluna B). Arraste as definições para conectar com os termos.</p>
+            <div class="columns-game">
+                <div class="column-a">
+                    <div class="term" data-term="EXPANDIR">EXPANDIR</div>
+                    <div class="term" data-term="EVOCAR">EVOCAR</div>
+                    <div class="term" data-term="CONECTAR">CONECTAR</div>
+                    <div class="term" data-term="AVALIAR">AVALIAR</div>
+                    <div class="term" data-term="INTERAGIR">INTERAGIR</div>
+                </div>
+                <div class="column-b">
+                    <div class="definition" data-correct-term="CONECTAR">Conectar o estudante à uma problemática central, objetivo de aprendizagem ou a um contexto prático.</div>
+                    <div class="definition" data-correct-term="EVOCAR">Socializar para compreender, internalizar mensurar e ampliar a aprendizagem baseada em contextos colaborativos e/ou de resolução de problemas.</div>
+                    <div class="definition" data-correct-term="INTERAGIR">Ativar processos interativos, dialógicos, colaborativos para desenvolver capacidades e habilidades de aprendizagem, como criatividade, colaboração, comunicação e a capacidade de resolver problemas.</div>
+                    <div class="definition" data-correct-term="EXPANDIR">Conectadas às memórias associativas para expandir o repertório, as conexões neurais a partir de codificações, repetições e das estratégias multissensoriais.</div>
+                    <div class="definition" data-correct-term="AVALIAR">Refletir sobre o seu próprio processo de aprendizagem, por meio de feedbacks que promovam pensamento crítico e reorganização do conhecimento.</div>
+                </div>
+            </div>
+            <div id="level-1-feedback" class="feedback"></div>
+            <button id="next-level-2-button" style="display: none;">Ir para o Nível 2</button>
+        </div>
+
+        <div id="level-2-screen" class="screen">
+            <h1>Nível 2: Veterano da Neuroaprendizagem</h1>
+            <h3>Jogo da Memória</h3>
+            <p>Encontre os pares corretos. Aqui, você deve conectar o processo da Taxonomia ao seu princípio neurocientífico correspondente. Clique nas cartas para virá-las.</p>
+            <div class="memory-game">
+                <div class="memory-card" data-pair="CONECTAR">
+                    <div class="front-face">CONECTAR</div>
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-pair="Aprendizagem Significativa e Emocional">
+                    <div class="front-face">Aprendizagem Significativa e Emocional</div>
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-pair="EXPLORAR">
+                    <div class="front-face">EXPLORAR</div>
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-pair="Conectividade Neural e Aprendizagem Distribuída">
+                    <div class="front-face">Conectividade Neural e Aprendizagem Distribuída</div>
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-pair="EXPANDIR">
+                    <div class="front-face">EXPANDIR</div>
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-pair="Engajamento Social e Cognição Social">
+                    <div class="front-face">Engajamento Social e Cognição Social</div>
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-pair="EVOCAR">
+                    <div class="front-face">EVOCAR</div>
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-pair="Aprendizagem Multissensorial e Memória">
+                    <div class="front-face">Aprendizagem Multissensorial e Memória</div>
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-pair="INTERAGIR">
+                    <div class="front-face">INTERAGIR</div>
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-pair="Criatividade e Solução de Problemas">
+                    <div class="front-face">Criatividade e Solução de Problemas</div>
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-pair="AVALIAR">
+                    <div class="front-face">AVALIAR</div>
+                    <div class="back-face"></div>
+                </div>
+                <div class="memory-card" data-pair="Repetição Variada e Espaçada">
+                    <div class="front-face">Repetição Variada e Espaçada</div>
+                    <div class="back-face"></div>
+                </div>
+            </div>
+            <div id="level-2-feedback" class="feedback"></div>
+            <button id="next-level-3-button" style="display: none;">Ir para o Nível 3</button>
+        </div>
+
+        <div id="level-3-screen" class="screen">
+            <h1>Nível 3: Profissional Radial</h1>
+            <h3>Quiz com Cenários Práticos</h3>
+            <p>Leia as situações pedagógicas a seguir e escolha qual processo da Taxonomia da Neuroaprendizagem foi o principal pilar da estratégia do professor. Apenas uma resposta é a correta.</p>
+            <div class="quiz-container">
+                <div class="question-block">
+                    <p class="scenario">**Cenário 1:** Uma professora de biologia, ao invés de apenas listar as partes da célula, leva os alunos a um laboratório para montarem modelos 3D com massinha, texturas diferentes e luzes de LED. Qual processo ela está priorizando?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="a"> a) Evocar</label>
+                        <label><input type="radio" name="q1" value="b"> b) Conectar</label>
+                        <label><input type="radio" name="q1" value="c"> c) Expandir</label>
+                    </div>
+                    <div class="answer-feedback" id="q1-feedback"></div>
+                </div>
+
+                <div class="question-block">
+                    <p class="scenario">**Cenário 2:** Um docente de história percebe que a turma está apática. Ele pausa a aula sobre a Revolução Francesa e pergunta: "Se vocês pudessem criar um meme que resumisse a queda da Bastilha, como seria?". A turma se agita e começa a debater ideias. Qual processo foi o gatilho para o engajamento?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="a"> a) Explorar</label>
+                        <label><input type="radio" name="q2" value="b"> b) Efetivar</label>
+                        <label><input type="radio" name="q2" value="c"> c) Avaliar</label>
+                    </div>
+                    <div class="answer-feedback" id="q2-feedback"></div>
+                </div>
+
+                <div class="question-block">
+                    <p class="scenario">**Cenário 3:** No final de um projeto de programação, o professor não entrega uma nota final. Em vez disso, ele senta com cada aluno, mostra o progresso deles ao longo do semestre e faz perguntas como: "O que você aprendeu sobre seu próprio jeito de resolver problemas?". Qual processo está no centro desta abordagem?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="a"> a) Interagir</label>
+                        <label><input type="radio" name="q3" value="b"> b) Avaliar</label>
+                        <label><input type="radio" name="q3" value="c"> c) Conectar</label>
+                    </div>
+                    <div class="answer-feedback" id="q3-feedback"></div>
+                </div>
+
+                <div class="question-block">
+                    <p class="scenario">**Cenário 4:** Para ensinar um tema complexo de finanças, um professor divide a turma em pequenos grupos e dá a cada grupo a tarefa de criar um tutorial de 1 minuto no TikTok explicando um dos conceitos para leigos. Qual processo é mais evidente nesta atividade?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="a"> a) Evocar</label>
+                        <label><input type="radio" name="q4" value="b"> b) Expandir</label>
+                        <label><input type="radio" name="q4" value="c"> c) Efetivar</label>
+                    </div>
+                    <div class="answer-feedback" id="q4-feedback"></div>
+                </div>
+            </div>
+            <button id="submit-quiz-button">Verificar Respostas</button>
+            <div id="level-3-feedback" class="feedback"></div>
+            <button id="next-level-final-button" style="display: none;">Ver minha conquista!</button>
+        </div>
+
+        <div id="final-screen" class="screen">
+            <h1>Desafio Concluído!</h1>
+            <p>Você completou a jornada pela Taxonomia da Neuroaprendizagem e demonstrou um conhecimento profundo sobre como potencializar o aprendizado. Continue aplicando esses conceitos para transformar suas aulas!</p>
+            <p class="prize-info">**Atenção!** Se você for um(a) dos(as) 10 primeiros(as) docentes a completar o desafio e enviar um print desta tela para [email ou contato], você ganhará uma coleção exclusiva de e-books sobre inovação na educação!</p>
+            <button id="restart-button">Refazer o Desafio</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
